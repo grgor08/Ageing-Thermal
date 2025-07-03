@@ -1,12 +1,13 @@
 import pybamm as pb, numpy as np, matplotlib.pyplot as plt
 
-N_cycles = 800
+N_cycles = 100
 exp = pb.Experiment([
     "Discharge at 3C until 2.5 V",
     "Charge at 1C until 4.2 V",
 ] * N_cycles)
 
 def run_model(temp_K, coupled=True):
+
     params = pb.ParameterValues("OKane2022").copy()
     params.update({"Nominal cell capacity [A.h]": 3.2,
                    "Total heat transfer coefficient [W.m-2.K-1]": 2,
@@ -16,14 +17,14 @@ def run_model(temp_K, coupled=True):
         opts = {"thermal": "lumped",          # fully-coupled
                 "SEI": "solvent-diffusion limited",
                 "SEI porosity change": "false",
-                "lithium plating": "none",
+                "lithium plating": "irreversible",
                 "particle mechanics": ("swelling and cracking", "swelling only"),
                 "loss of active material": "stress-driven"}
     else:
         opts = {"thermal": "isothermal",
                 "SEI": "solvent-diffusion limited",
                 "SEI porosity change": "false",
-                "lithium plating": "none",
+                "lithium plating": "irreversible",
                 "particle mechanics": ("swelling and cracking", "swelling only"),
                 "loss of active material": "stress-driven"}
 
