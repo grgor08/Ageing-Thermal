@@ -2,7 +2,7 @@ import pybamm
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-
+from itertools import cycle
 from Cycling_Ageing_V0 import experiment
 
 # ------------------------------------------------------------------ #
@@ -37,7 +37,7 @@ stioc_initi=deg_param.set_initial_stoichiometries(1)
 # ------------------------------------------------------------------ #
 # 2.  Defining a cycling protocol
 # ------------------------------------------------------------------ #
-n_cycles= 300
+n_cycles= 800
 exp = pybamm.Experiment(
     [
         (
@@ -55,15 +55,58 @@ exp = pybamm.Experiment(
 # ------------------------------------------------------------------ #
 #solver = pybamm.CasadiSolver()
 solver = pybamm.IDAKLUSolver()
+# ------------------------------------------------------------------
+# 2.  Temperatures to sweep (°C)
+# ------------------------------------------------------------------
+temps_C = [25, 45, 55]                       # edit as you like
+temps_K = [t + 273.15 for t in temps_C]
+
+results = {}
+for T, label in zip(temps_K, temps_C):
+    # clone the parameter object so each run is independent
+    pars = deg_param.copy()
+    pars.update({
+        "Ambient temperature [K]" : T,
+        "Initial temperature [K]" : T,
+    })
+    sim = pybamm.Simulation(deg_model,
+                            parameter_values=pars,
+                            experiment=exp,
+                            solver=solver)
+    print(f"Solving {label} °C …")
+    sol = sim.solve()
+    results[label] = sol
+
+# ------------------------------------------------------------------
+# 3.  Compare capacity-fade vs. cycle for the three temperatures
+# ------------------------------------------------------------------
+# print("experiment has", len(experiment.operations), "steps")
+# cap = sol.summary_variables["Capacity [A.h]"]
+# print("summary array length =", len(cap))
+
+
+#print(sol.summary_variables.all_variables)
+plt.figure(figsize=(6,4))
+colours = cycle(["tab:blue", "tab:orange", "tab:red"])
+for T, c in zip(temps_C, colours):
+    sol   = results[T]
+    cycles = sol.summary_variables.cycle_number
+    Q     = sol.summary_variables["Capacity [A.h]"]
+    plt.plot(cycles, Q, label=f"{T} °C", color=c)
+plt.xlabel("Cycle number")
+plt.ylabel("Capacity [A h]")
+plt.title("Capacity retention vs. temperature, 1 C cycling")
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+# ------------------------------------------------------------------
+# 4.  Inspect full summary panels for a single temperature (e.g. 55 °C)
+# ------------------------------------------------------------------
+pybamm.plot_summary_variables(results[55])
+
+
 sim= pybamm.Simulation(deg_model, parameter_values=deg_param, experiment= exp,
                        solver=solver)
 sol= sim.solve()
-# sot_sol= sorted(sol.summary_variables.all_variables)
-# print(sot_sol)
 
-# ------------------------------------------------------------------ #
-# 4. plotting
-# ------------------------------------------------------------------ #
-
-pybamm.plot_summary_variables(sol)
-plt.show()
