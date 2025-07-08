@@ -1,6 +1,6 @@
 import pybamm as pb, numpy as np, matplotlib.pyplot as plt
 
-N_cycles = 800
+N_cycles = 100
 exp = pb.Experiment([
     "Discharge at 3C until 2.5 V",
     "Charge at 1C until 4.2 V",
@@ -14,7 +14,7 @@ def run_model(temp_K, coupled=True):
                    "Ambient temperature [K]": temp_K})
     if coupled:
         params.update({"Initial temperature [K]": temp_K})
-        opts = {"thermal": "lumped",          # fully-coupled q
+        opts = {"thermal": "lumped",          # fully-coupled
                 "SEI": "solvent-diffusion limited",
                 "SEI porosity change": "false",
                 "lithium plating": "irreversible",
@@ -30,8 +30,8 @@ def run_model(temp_K, coupled=True):
 
     model = pb.lithium_ion.DFN(opts)
     solver = pb.IDAKLUSolver()
-    solver.rtol = 1e-6
-    solver.atol = 1e-8
+    solver.rtol = 1e-5
+    solver.atol = 1e-7
     sim = pb.Simulation(model, parameter_values=params,
                         experiment=exp, solver=solver)
     return sim.solve()
@@ -48,7 +48,7 @@ def discharge_caps(sol):
     caps = []
     for cyc in sol.cycles:
         I = cyc["Current [A]"].data
-        if np.mean(I) < 0:                 # PyBaMM convention: +ve = discharge
+        if np.mean(I) > 0:                 # PyBaMM convention: +ve = discharge
             caps.append(np.max(cyc["Discharge capacity [A.h]"].data))
     return caps
 
