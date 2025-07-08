@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="72e630e0-ad13-4be5-95d9-ddd111060912" name="Changes" comment="Validate the model with Ramadass V1">
+      <change afterPath="$PROJECT_DIR$/PyBamm_DryRun_VS Ramadass_V1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PyBamm_Staggered_fully-coupled_DryRun_V2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Codes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Codes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PyBamm_Staggered_fully-coupled_DryRun.py" beforeDir="false" afterPath="$PROJECT_DIR$/PyBamm_Staggered_fully-coupled_DryRun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ramadass_45C.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ramadass_45C.csv" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="REBASE" />
+      </set>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;grgor08&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/grgor08/Ageing-Thermal.git",
+    "accountId": "e3365874-4da4-4efb-92db-17771b478127"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2yT4r13SQ66p8DTHX6R8jXnQRt9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.Blast_Ex_V1.executor": "Run",
+    "Python.Blast_Life_V0.executor": "Run",
+    "Python.Convert_TXT_ to_CSV.executor": "Run",
+    "Python.Cycling_Ageing_V0.executor": "Run",
+    "Python.First_Prin_PyBamm.executor": "Run",
+    "Python.PyBamm_Degradation_v0.executor": "Run",
+    "Python.PyBamm_DryRun_VS Ramadass_V1.executor": "Run",
+    "Python.PyBamm_Staggered_V0.executor": "Run",
+    "Python.PyBamm_Staggered_fully-coupled.executor": "Run",
+    "Python.PyBamm_Staggered_fully-coupled_DryRun.executor": "Run",
+    "Python.PyBamm_Staggered_fully-coupled_DryRun_V2.executor": "Run",
+    "Python.PyBamm_Staggered_fully-coupled_V0.executor": "Run",
+    "Python.PyBamm_Staggered_fully-coupled_V1.executor": "Run",
+    "Python.PyBamm_Staggered_fully-coupled_V2.executor": "Run",
+    "Python.PyBamm_Thermal_V0.executor": "Run",
+    "Python.PyBamm_V0.executor": "Run",
+    "Python.PyBamm_V1.executor": "Run",
+    "Python.PyBamm_V2_Lumbed_Model.executor": "Run",
+    "Python.Summary.executor": "Run",
+    "Python.Test.executor": "Run",
+    "Python.Tidy_FEMA.executor": "Run",
+    "Python.V0.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/scalv/OneDrive - Texas A&M University/Scalvy/Codes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\scalv\OneDrive - Texas A&amp;M University\Scalvy\Codes" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.PyBamm_DryRun_VS Ramadass_V1">
+    <configuration name="PyBamm_DryRun_VS Ramadass_V1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Codes" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyBamm_DryRun_VS Ramadass_V1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PyBamm_Staggered_fully-coupled" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Codes" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyBamm_Staggered_fully-coupled.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PyBamm_Staggered_fully-coupled_DryRun" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Codes" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.12 (Codes)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyBamm_Staggered_fully-coupled_DryRun.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PyBamm_Staggered_fully-coupled_DryRun_V2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Codes" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PyBamm_Staggered_fully-coupled_DryRun_V2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tidy_FEMA" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Codes" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../Team - H2Equate - General/Code" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../Team - H2Equate - General/Code/Tidy_FEMA.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.PyBamm_DryRun_VS Ramadass_V1" />
+      <item itemvalue="Python.PyBamm_Staggered_fully-coupled_DryRun_V2" />
+      <item itemvalue="Python.PyBamm_Staggered_fully-coupled_DryRun" />
+      <item itemvalue="Python.PyBamm_Staggered_fully-coupled" />
+      <item itemvalue="Python.Tidy_FEMA" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.PyBamm_DryRun_VS Ramadass_V1" />
+        <item itemvalue="Python.PyBamm_Staggered_fully-coupled_DryRun_V2" />
+        <item itemvalue="Python.PyBamm_Staggered_fully-coupled_DryRun" />
+        <item itemvalue="Python.Tidy_FEMA" />
+        <item itemvalue="Python.PyBamm_Staggered_fully-coupled" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PY-251.26094.141" />
+        <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72e630e0-ad13-4be5-95d9-ddd111060912" name="Changes" comment="" />
+      <created>1749845423472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749845423472</updated>
+      <workItem from="1751405358000" duration="1249000" />
+      <workItem from="1751467571075" duration="4080000" />
+      <workItem from="1751471975242" duration="16341000" />
+      <workItem from="1751568182624" duration="1353000" />
+      <workItem from="1751571181765" duration="4816000" />
+      <workItem from="1751758986821" duration="1373000" />
+      <workItem from="1751760424322" duration="90000" />
+      <workItem from="1751768807493" duration="1140000" />
+      <workItem from="1751769957420" duration="250000" />
+      <workItem from="1751770254114" duration="11000" />
+      <workItem from="1751770274617" duration="957000" />
+      <workItem from="1751771318343" duration="2247000" />
+      <workItem from="1751907865231" duration="13209000" />
+      <workItem from="1751951049287" duration="2586000" />
+    </task>
+    <task id="LOCAL-00001" summary="Adding all the files">
+      <option name="closed" value="true" />
+      <created>1751571295614</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751571295614</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Run for 800">
+      <option name="closed" value="true" />
+      <created>1751908656761</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751908656761</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding all the files" />
+    <MESSAGE value="updated the thermal model" />
+    <MESSAGE value="Run for 800" />
+    <MESSAGE value="Validate the model with Ramadass V1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Validate the model with Ramadass V1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PyBamm_Staggered_fully_coupled_V1_py$PyBamm_Staggered_fully_coupled.coverage" NAME="PyBamm_Staggered_fully-coupled Coverage Results" MODIFIED="1751478894223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyBamm_DryRun_VS_Ramadass_V1_py$PyBamm_DryRun_VS_Ramadass_V1.coverage" NAME="PyBamm_DryRun_VS Ramadass_V1 Coverage Results" MODIFIED="1751951826595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyBamm_Staggered_fully_coupled_V1_py$PyBamm_Staggered_fully_coupled_V1.coverage" NAME="PyBamm_Staggered_fully-coupled_V1 Coverage Results" MODIFIED="1751478334507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyBamm_Staggered_fully_coupled_V1_py$Tidy_FEMA.coverage" NAME="Tidy_FEMA Coverage Results" MODIFIED="1751557147564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../Team - H2Equate - General/Code" />
+    <SUITE FILE_PATH="coverage/PyBamm_Staggered_fully_coupled_V1_py$Cycling_Ageing_V0.coverage" NAME="Cycling_Ageing_V0 Coverage Results" MODIFIED="1751469810760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyBamm_Staggered_fully_coupled_DryRun_py$PyBamm_Staggered_fully_coupled_DryRun_V2.coverage" NAME="PyBamm_Staggered_fully-coupled_DryRun_V2 Coverage Results" MODIFIED="1751923969011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyBamm_Staggered_fully_coupled_DryRun_py$PyBamm_Staggered_fully_coupled_DryRun.coverage" NAME="PyBamm_Staggered_fully-coupled_DryRun Coverage Results" MODIFIED="1751911508278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyBamm_Staggered_fully_coupled_V1_py$Summary.coverage" NAME="Summary Coverage Results" MODIFIED="1751469862879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PyBamm_Staggered_fully_coupled_V1_py$PyBamm_Staggered_fully_coupled_DryRun.coverage" NAME="PyBamm_Staggered_fully-coupled_DryRun Coverage Results" MODIFIED="1751479150223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
