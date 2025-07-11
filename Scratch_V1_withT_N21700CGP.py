@@ -27,8 +27,8 @@ Q_ref  = deg_param["Nominal cell capacity [A.h]"]
 deg_param.update({"Nominal cell capacity [A.h]": Q_new})
 scale = Q_new / Q_ref
 deg_param.update({
-    "Electrode width [m]":  deg_param["Electrode width [m]"]  * scale**0.56,
-    "Electrode height [m]": deg_param["Electrode height [m]"] * scale**0.56,
+    "Electrode width [m]":  deg_param["Electrode width [m]"]  * scale**0.555,
+    "Electrode height [m]": deg_param["Electrode height [m]"] * scale**0.555,
 })
 
 r_cyl = 21.30e-3 / 2          # 10.65 mm
@@ -89,7 +89,7 @@ stioc_initi=deg_param.set_initial_stoichiometries(1)
 # ------------------------------------------------------------------ #
 # 2.  Defining a cycling protocol
 # ------------------------------------------------------------------ #
-n_cycles= 100
+n_cycles= 250
 
 ### replicate the spec-sheet life test
 # one_cycle = [
