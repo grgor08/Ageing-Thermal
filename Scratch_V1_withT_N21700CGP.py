@@ -27,8 +27,8 @@ Q_ref  = deg_param["Nominal cell capacity [A.h]"]
 deg_param.update({"Nominal cell capacity [A.h]": Q_new})
 scale = Q_new / Q_ref
 deg_param.update({
-    "Electrode width [m]":  deg_param["Electrode width [m]"]  * scale**0.5,
-    "Electrode height [m]": deg_param["Electrode height [m]"] * scale**0.5,
+    "Electrode width [m]":  deg_param["Electrode width [m]"]  * scale**0.9,
+    "Electrode height [m]": deg_param["Electrode height [m]"] * scale**0.9,
 })
 
 r_cyl = 21.30e-3 / 2          # 10.65 mm
@@ -67,7 +67,7 @@ deg_model= pybamm.lithium_ion.DFN({
     "thermal": "lumped",
     "SEI": "solvent-diffusion limited",
     "SEI porosity change": "true",
-    "lithium plating": "partially reversible",
+    "lithium plating": "irreversible",
     "lithium plating porosity change": "true",  # alias for "SEI porosity change"
     "particle mechanics": ("swelling and cracking", "swelling only"),
     "SEI on cracks": "true",
@@ -86,7 +86,7 @@ stioc_initi=deg_param.set_initial_stoichiometries(1)
 # ------------------------------------------------------------------ #
 # 2.  Defining a cycling protocol
 # ------------------------------------------------------------------ #
-n_cycles= 400
+n_cycles= 250
 
 ### replicate the spec-sheet life test
 # one_cycle = [
@@ -100,7 +100,7 @@ n_cycles= 400
 exp = pybamm.Experiment(
     [
         (
-            "Discharge at 3C until 3V",
+            "Discharge at 1C until 3V",
             "Rest for 1 hour",
             "Charge at 1C until 4.2V",
             "Hold at 4.2V until C/50",
@@ -120,8 +120,8 @@ solver = pybamm.IDAKLUSolver()
 # ------------------------------------------------------------------
 # 2.  Temperatures to sweep (°C)
 # ------------------------------------------------------------------
-temps_C = [25, 45, 55]
-#temps_C = [25]  # for debugging
+#temps_C = [25, 45, 55]
+temps_C = [25]  # for debugging
 temps_K = [t + 273.15 for t in temps_C]
 
 results = {}
@@ -181,7 +181,7 @@ plt.show()
 # ------------------------------------------------------------------
 # 4.  Inspect full summary panels for a single temperature (e.g. 55 °C)
 # ------------------------------------------------------------------
-pybamm.plot_summary_variables(results[55])
+pybamm.plot_summary_variables(results[75])
 #
 #
 # sim= pybamm.Simulation(deg_model, parameter_values=deg_param, experiment= exp,
