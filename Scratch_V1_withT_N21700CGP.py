@@ -43,7 +43,10 @@ deg_param.update({
     # voltage limits:
     "Upper voltage cut-off [V]":   4.2,
     "Lower voltage cut-off [V]":   2.5,
-    "SEI kinetic rate constant [m.s-1]": 1e-14
+    "SEI kinetic rate constant [m.s-1]": 1e-14,
+    "Lithium plating kinetic rate constant [m.s-1]": 5e-13,
+    # or raise activation energy so plating is mild at 25 °C, aggressive only at 55 °C
+    "SEI growth activation energy [J.mol-1]":    40000,
 })
 
 # deg_param.update({
@@ -181,7 +184,7 @@ plt.show()
 # ------------------------------------------------------------------
 # 4.  Inspect full summary panels for a single temperature (e.g. 55 °C)
 # ------------------------------------------------------------------
-pybamm.plot_summary_variables(results[75])
+pybamm.plot_summary_variables(results[25])
 #
 #
 # sim= pybamm.Simulation(deg_model, parameter_values=deg_param, experiment= exp,
