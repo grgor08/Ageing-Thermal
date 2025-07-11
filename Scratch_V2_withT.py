@@ -13,7 +13,7 @@ deg_param=  pybamm.ParameterValues("OKane2022")
 #print(deg_param)
 deg_param.update({"SEI kinetic rate constant [m.s-1]": 1e-14})
 
-deg_model= pybamm.lithium_ion.SPM({
+deg_model= pybamm.lithium_ion.DFN({
     "SEI": "solvent-diffusion limited",
     "thermal": "lumped",
     "SEI": "solvent-diffusion limited",
@@ -86,7 +86,38 @@ single_cycle_exp = pybamm.Experiment([
     "Hold at 4.2V until C/50",
 ])
 
+import pandas as pd
 
+# Prepare data for export
+export_data = []
+for T in temps_C:
+    sol = results[T]
+    cycles = sol.summary_variables.cycle_number
+    Q = sol.summary_variables["Capacity [A.h]"]
+    Q_mAh = Q * 1000  # Convert to mAh
+    cap_loss_mAh = Q_mAh[0] - Q_mAh[-1]
+    cap_loss_pct = 100 * (Q_mAh[0] - Q_mAh[-1]) / Q_mAh[0]
+    for cycle, cap in zip(cycles, Q_mAh):
+        export_data.append({
+            "Temperature (°C)": T,
+            "Cycle": cycle,
+            "Capacity (mAh)": cap,
+        })
+    # Add summary row for this temperature
+
+
+    # ... inside your loop:
+    for cycle_num, cap in zip(cycles, Q_mAh):
+        export_data.append({
+            "Temperature (°C)": T,
+            "Cycle": cycle_num,
+            "Capacity (mAh)": cap,
+        })
+print(f" The capacity loss at {T} °C is {cap_loss_mAh:.2f} mAh, "
+      f"which is {cap_loss_pct:.2f}% of the initial capacity.")
+# Convert to DataFrame and export
+df = pd.DataFrame(export_data)
+df.to_excel("capacity_results.xlsx", index=False)
 # ------------------------------------------------------------------
 # 3.  Compare capacity-fade vs. cycle for the three temperatures
 # ------------------------------------------------------------------
