@@ -27,8 +27,8 @@ Q_ref  = deg_param["Nominal cell capacity [A.h]"]
 deg_param.update({"Nominal cell capacity [A.h]": Q_new})
 scale = Q_new / Q_ref
 deg_param.update({
-    "Electrode width [m]":  deg_param["Electrode width [m]"]  * scale**0.9,
-    "Electrode height [m]": deg_param["Electrode height [m]"] * scale**0.9,
+    "Electrode width [m]":  deg_param["Electrode width [m]"]  * scale**0.56,
+    "Electrode height [m]": deg_param["Electrode height [m]"] * scale**0.56,
 })
 
 r_cyl = 21.30e-3 / 2          # 10.65 mm
@@ -44,7 +44,7 @@ deg_param.update({
     "Upper voltage cut-off [V]":   4.2,
     "Lower voltage cut-off [V]":   2.5,
     "SEI kinetic rate constant [m.s-1]": 1e-14,
-    "Lithium plating kinetic rate constant [m.s-1]": 5e-13,
+    "Lithium plating kinetic rate constant [m.s-1]": 5e-11,
     # or raise activation energy so plating is mild at 25 °C, aggressive only at 55 °C
     "SEI growth activation energy [J.mol-1]":    40000,
 })
@@ -89,7 +89,7 @@ stioc_initi=deg_param.set_initial_stoichiometries(1)
 # ------------------------------------------------------------------ #
 # 2.  Defining a cycling protocol
 # ------------------------------------------------------------------ #
-n_cycles= 250
+n_cycles= 100
 
 ### replicate the spec-sheet life test
 # one_cycle = [
@@ -103,10 +103,10 @@ n_cycles= 250
 exp = pybamm.Experiment(
     [
         (
-            "Discharge at 1C until 3V",
-            "Rest for 1 hour",
-            "Charge at 1C until 4.2V",
-            "Hold at 4.2V until C/50",
+            "Charge at 1.5C until 4.2V",
+            "Hold at 4.2V until C/40",
+            "Discharge at 8.75C until 2.5V",
+            "Rest for 30 minutes",
         )
     ]
     * n_cycles
