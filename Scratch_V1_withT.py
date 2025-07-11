@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from itertools import cycle
-from Cycling_Ageing_V0 import experiment
+#from Cycling_Ageing_V0 import experiment
 
 # ------------------------------------------------------------------ #
 # 1.  modelling the four coupled degradation mechanisms
@@ -37,7 +37,7 @@ stioc_initi=deg_param.set_initial_stoichiometries(1)
 # ------------------------------------------------------------------ #
 # 2.  Defining a cycling protocol
 # ------------------------------------------------------------------ #
-n_cycles= 800
+n_cycles= 400
 exp = pybamm.Experiment(
     [
         (
@@ -58,7 +58,8 @@ solver = pybamm.IDAKLUSolver()
 # ------------------------------------------------------------------
 # 2.  Temperatures to sweep (°C)
 # ------------------------------------------------------------------
-temps_C = [25, 45, 55]                       # edit as you like
+temps_C = [25, 45, 55]
+#temps_C = [55]  # for debugging
 temps_K = [t + 273.15 for t in temps_C]
 
 results = {}
@@ -69,6 +70,7 @@ for T, label in zip(temps_K, temps_C):
         "Ambient temperature [K]" : T,
         "Initial temperature [K]" : T,
     })
+    pars.set_initial_stoichiometries(1)
     sim = pybamm.Simulation(deg_model,
                             parameter_values=pars,
                             experiment=exp,
@@ -76,6 +78,14 @@ for T, label in zip(temps_K, temps_C):
     print(f"Solving {label} °C …")
     sol = sim.solve()
     results[label] = sol
+
+single_cycle_exp = pybamm.Experiment([
+    "Discharge at 1C until 3V",
+    "Rest for 1 hour",
+    "Charge at 1C until 4.2V",
+    "Hold at 4.2V until C/50",
+])
+
 
 # ------------------------------------------------------------------
 # 3.  Compare capacity-fade vs. cycle for the three temperatures
