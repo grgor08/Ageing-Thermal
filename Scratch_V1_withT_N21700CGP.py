@@ -100,10 +100,23 @@ n_cycles= 250
 #     pybamm.step.string("Rest for 30 minutes"),
 # ]
 # exp = pybamm.Experiment(one_cycle * 250, period="2 minutes")
+# exp = pybamm.Experiment(
+#     [
+#         (
+#             "Discharge at 1C until 3V",
+#             "Rest for 1 hour",
+#             "Charge at 1C until 4.2V",
+#             "Hold at 4.2V until C/50",
+#         )
+#     ]
+#     * n_cycles
+# )
+
+
 exp = pybamm.Experiment(
     [
         (
-            "Charge at 1.5C until 4.2V",
+            "Charge at 3C until 4.2V",
             "Hold at 4.2V until C/40",
             "Discharge at 8.75C until 2.5V",
             "Rest for 30 minutes",
