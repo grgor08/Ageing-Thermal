@@ -21,7 +21,7 @@ var_pts = {
     "r_n": 30,  # negative particle
     "r_p": 30,  # positive particle
 }
-#print(deg_param)
+print(deg_param)
 Q_new  = 4.0
 Q_ref  = deg_param["Nominal cell capacity [A.h]"]
 deg_param.update({"Nominal cell capacity [A.h]": Q_new})
@@ -43,8 +43,8 @@ deg_param.update({
     # voltage limits:
     "Upper voltage cut-off [V]":   4.2,
     "Lower voltage cut-off [V]":   2.5,
-    "SEI kinetic rate constant [m.s-1]": 1e-14,
-    "Lithium plating kinetic rate constant [m.s-1]": 5e-11,
+    "SEI kinetic rate constant [m.s-1]": 1e-14,  # OKane2022 was 1e-14
+    "Lithium plating kinetic rate constant [m.s-1]": 1e-11,
     # or raise activation energy so plating is mild at 25 °C, aggressive only at 55 °C
     "SEI growth activation energy [J.mol-1]":    40000,
 })
@@ -116,8 +116,9 @@ n_cycles= 250
 exp = pybamm.Experiment(
     [
         (
-            "Charge at 3C until 4.2V",
-            "Hold at 4.2V until C/40",
+            "Charge at 1.5C until 4.2V",
+            "Hold at 4.2V until C/50",
+            "Rest for 10 minutes",
             "Discharge at 8.75C until 2.5V",
             "Rest for 30 minutes",
         )
@@ -163,12 +164,6 @@ for T, label in zip(temps_K, temps_C):
     # gc.collect()
     results[label] = sol
 
-# single_cycle_exp = pybamm.Experiment([
-#     "Discharge at 1C until 3V",
-#     "Rest for 1 hour",
-#     "Charge at 1C until 4.2V",
-#     "Hold at 4.2V until C/50",
-# ])
 
 
 # ------------------------------------------------------------------
@@ -189,7 +184,7 @@ for T, c in zip(temps_C, colours):
     plt.plot(cycles, Q, label=f"{T} °C", color=c)
 plt.xlabel("Cycle number")
 plt.ylabel("Capacity [A h]")
-plt.title("Capacity fade of N21700CGP vs. temperature")
+plt.title("Capacity fade of N21700CGP (x-full) vs. temperature")
 plt.legend()
 plt.tight_layout()
 plt.show()
